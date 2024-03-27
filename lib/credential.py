@@ -30,15 +30,15 @@ class Credential(object):
                     # Generate the base URL
                     key_vault_url = parts.scheme + "://" + parts.netloc
                     # Generate the SecretClient to retrieve the secret using the "DefaultAzureCredential"
-                    #  If a User Managed Identity is configured, the ID must be passed on AZURE_CLIENT_ID
+                    #  If a User Managed Identity is configured, the ID must be passed on MANAGED_IDENTITY_CLIENT_ID
                     secret_client_params = {
                         "exclude_developer_cli_credential" : True,
                         "exclude_cli_credential": True,
                         "exclude_visual_studio_code_credential": True,
                         "exclude_interactive_browser_credential": True
                     }
-                    if 'AZURE_CLIENT_ID' in CONFIG:
-                        secret_client_params['client_id'] = CONFIG['AZURE_CLIENT_ID']
+                    if 'MANAGED_IDENTITY_CLIENT_ID' in CONFIG:
+                        secret_client_params['managed_identity_client_id'] = CONFIG['MANAGED_IDENTITY_CLIENT_ID']
 
                     secret_client = SecretClient(vault_url=key_vault_url,
                                                  credential=DefaultAzureCredential(**secret_client_params)

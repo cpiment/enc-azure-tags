@@ -66,7 +66,7 @@ CONFIG = {
 }
 ```
 
-You can also specify an Azure Managed Identity ID to retrieve the password using `AZURE_CLIENT_ID` in the config.py file
+You can also specify an Azure Managed Identity ID to retrieve the password using `MANAGED_IDENTITY_CLIENT_ID` in the config.py file
 
 Create a python virtual environment named `venv`, activate it and install the required packages
 
@@ -156,7 +156,7 @@ CONFIG = {
 }
 ```
 
-You can also specify an Azure Managed Identity ID to retrieve the password using `AZURE_CLIENT_ID` in the config.py file
+You can also specify an Azure Managed Identity ID to retrieve the password using `MANAGED_IDENTITY_CLIENT_ID` in the config.py file
 
 Create a python virtual environment named `venv`, activate it and install the required packages
 
