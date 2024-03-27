@@ -1,0 +1,6 @@
+azure-identity
+azure-mgmt-resource
+azure-keyvault-secrets
+pyyaml
+flask
+waitress

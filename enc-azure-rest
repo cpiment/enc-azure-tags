@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+CURRENTDIR=$(dirname $0)
+ENDPOINT=http://localhost:8080
+curl -s ${ENDPOINT}/enc/hosts/$1
