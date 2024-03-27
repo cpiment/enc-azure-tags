@@ -1,5 +1,7 @@
 CONFIG = {
     "SERVICE_PRINCIPAL_CLIENT_ID": 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
     "SERVICE_PRINCIPAL_CLIENT_SECRET": '*****************************',
-    "SERVICE_PRINCIPAL_TENANT_ID": 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy'
+    "SERVICE_PRINCIPAL_TENANT_ID": 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy',
+    "AZURE_CLIENT_ID": 'Optional, if SP secret from keyvault',
+    "SERSERVICE_PRINCIPAL_CLIENT_SECRET_KEYVAULT": 'Optional URL for SP secret in an Azure Keyvault'
 }

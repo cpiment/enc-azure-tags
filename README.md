@@ -49,6 +49,18 @@ CONFIG = {
 }
 ```
 
+Or if your Service Principal password is stored in a Keyvault
+
+```
+CONFIG = {
+    "SERVICE_PRINCIPAL_CLIENT_ID": 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+    "SERVICE_PRINCIPAL_CLIENT_SECRET": '*****************************',
+    "SERVICE_PRINCIPAL_CLIENT_SECRET_KEYVAULT": 'https://***.vault.azure.net/secrets/my-sp-password'
+}
+```
+
+You can also specify an Azure Managed Identity ID to retrieve the password using `AZURE_CLIENT_ID` in the config.py file
+
 Create a python virtual environment named `venv`, activate it and install the required packages
 
 ```
@@ -76,6 +88,8 @@ classes:
   role::iis:
 environment: test
 ```
+
+If you don't have a Service Principal you can test the script without a `config.py` file and it will try to use you Azure CLI credentials. So you have to do `az login` beforehand.
 
 # Contributing
 
